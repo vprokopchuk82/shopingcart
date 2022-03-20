@@ -1,0 +1,69 @@
+2022-03-20 10:35:23,418 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 10:36:28,063 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 10:36:37,561 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 1364, SQLState: HY000
+2022-03-20 10:36:37,561 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Field 'totalCount' doesn't have a default value
+2022-03-20 10:36:37,562 ERROR org.hibernate.internal.ExceptionMapperStandardImpl [main] HHH000346: Error during managed flush [org.hibernate.exception.GenericJDBCException: could not execute statement]
+2022-03-20 11:19:55,394 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:20:12,034 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:20:41,364 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 1364, SQLState: HY000
+2022-03-20 11:20:41,364 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Field 'totalCount' doesn't have a default value
+2022-03-20 11:20:41,365 ERROR org.hibernate.internal.ExceptionMapperStandardImpl [main] HHH000346: Error during managed flush [org.hibernate.exception.GenericJDBCException: could not execute statement]
+2022-03-20 11:24:15,764 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:26:28,130 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 1364, SQLState: HY000
+2022-03-20 11:26:28,131 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Field 'totalCount' doesn't have a default value
+2022-03-20 11:26:28,134 ERROR org.hibernate.internal.ExceptionMapperStandardImpl [main] HHH000346: Error during managed flush [org.hibernate.exception.GenericJDBCException: could not execute statement]
+2022-03-20 11:29:05,814 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:29:36,459 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 1364, SQLState: HY000
+2022-03-20 11:29:36,460 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Field 'totalCount' doesn't have a default value
+2022-03-20 11:30:32,269 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:31:48,730 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 1364, SQLState: HY000
+2022-03-20 11:31:48,730 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Field 'totalCount' doesn't have a default value
+2022-03-20 11:34:07,777 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:41:11,451 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:41:27,748 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:42:24,133 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:42:59,503 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:44:38,248 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:48:31,994 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:48:54,436 ERROR org.hibernate.internal.ExceptionMapperStandardImpl [main] HHH000346: Error during managed flush [org.hibernate.id.IdentifierGenerationException: ids for this class must be manually assigned before calling save(): com.vprokopchuk.shoppingcart.model.ItemWrapper]
+2022-03-20 11:51:38,627 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:51:53,273 ERROR org.hibernate.internal.ExceptionMapperStandardImpl [main] HHH000346: Error during managed flush [org.hibernate.PropertyValueException: not-null property references a null or transient value : com.vprokopchuk.shoppingcart.model.ItemWrapper.cart]
+2022-03-20 11:55:17,651 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 11:55:35,680 ERROR org.hibernate.internal.ExceptionMapperStandardImpl [main] HHH000346: Error during managed flush [org.hibernate.PropertyValueException: not-null property references a null or transient value : com.vprokopchuk.shoppingcart.model.ItemWrapper.cart]
+2022-03-20 11:56:10,286 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:33:59,728 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:42:57,970 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:44:06,900 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:46:12,659 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:47:37,016 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:52:16,821 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:55:56,519 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:55:59,509 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 13:57:48,175 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] SQL Error: 1159, SQLState: 08S01
+2022-03-20 13:57:48,176 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [pool-1-thread-1] Got timeout reading communication packets
+2022-03-20 14:30:38,351 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 14:35:19,973 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 14:50:08,707 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 14:59:05,217 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:05:44,290 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:07:06,212 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:41:01,866 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:44:33,311 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:45:17,138 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:45:54,432 WARN org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] SQL Error: 1451, SQLState: 23000
+2022-03-20 15:45:54,433 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [main] Cannot delete or update a parent row: a foreign key constraint fails (`shop`.`item_wrapper`, CONSTRAINT `FKk5f7n3oqgelvjmty8neuufsqd` FOREIGN KEY (`item_id`) REFERENCES `item` (`id`))
+2022-03-20 15:45:54,434 ERROR org.hibernate.internal.ExceptionMapperStandardImpl [main] HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2022-03-20 15:47:12,996 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:55:04,530 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:55:35,794 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 15:56:22,594 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 16:14:21,286 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 16:15:20,539 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 16:21:48,287 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 16:24:44,493 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 17:52:43,776 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 20:39:59,447 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 20:40:42,005 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 20:48:04,430 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 20:51:11,778 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2022-03-20 20:51:31,843 WARN org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl [main] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
