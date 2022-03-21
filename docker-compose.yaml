@@ -13,11 +13,6 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=shop
 
-  shoppingcart:
-    container_name: shoppingcart
-    image: vprokopchuk/shoppingcart
-    networks:
-      - bridge
 
 volumes:
   database_data:
