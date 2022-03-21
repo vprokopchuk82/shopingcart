@@ -1,0 +1,25 @@
+version: "3"
+services:
+  database:
+    container_name: database
+    image: mysql:8.0.18
+    ports:
+      - 3307:3306
+    volumes:
+      - database_data:/var/lib/mysql
+    networks:
+      - bridge
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=shop
+
+  shoppingcart:
+    container_name: shoppingcart
+    image: shoppingcart
+    networks:
+      - bridge
+
+volumes:
+  database_data:
+networks:
+  bridge:

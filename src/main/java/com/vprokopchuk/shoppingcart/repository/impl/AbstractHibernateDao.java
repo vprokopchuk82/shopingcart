@@ -1,7 +1,7 @@
 package com.vprokopchuk.shoppingcart.repository.impl;
 
 import com.vprokopchuk.shoppingcart.repository.IGenericDao;
-import com.vprokopchuk.shoppingcart.utils.SessionFactoryInitializer;
+import com.vprokopchuk.shoppingcart.utils.EngineContext;
 import org.hibernate.SessionFactory;
 
 import java.io.Serializable;
@@ -14,7 +14,7 @@ public abstract class AbstractHibernateDao<T extends Serializable> implements IG
         this.clazz = clazz;
     }
 
-    protected SessionFactory sessionFactory = SessionFactoryInitializer.getInstance();
+    protected SessionFactory sessionFactory = EngineContext.getSessionFacory();
 
         public void setClazz(final Class<T> clazzToSet) {
             clazz = clazzToSet;

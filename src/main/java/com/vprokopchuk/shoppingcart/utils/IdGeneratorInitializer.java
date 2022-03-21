@@ -10,8 +10,10 @@ public class IdGeneratorInitializer {
 
     public static IdGenerator getInstance(){
         if (Objects.isNull(idGenerator)){
-            idGenerator = new IdGenerator();
-            return idGenerator;
+            synchronized (IdGeneratorInitializer.class) {
+                idGenerator = new IdGenerator();
+                return idGenerator;
+            }
         }
         else return idGenerator;
     }

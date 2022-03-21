@@ -9,9 +9,9 @@ import com.vprokopchuk.shoppingcart.repository.ItemRepository;
 import com.vprokopchuk.shoppingcart.repository.ItemWrapperRepository;
 import com.vprokopchuk.shoppingcart.repository.ShoppingCartRepository;
 import com.vprokopchuk.shoppingcart.service.ShoppingCartService;
+import com.vprokopchuk.shoppingcart.utils.EngineContext;
 import com.vprokopchuk.shoppingcart.utils.IdGenerator;
 import com.vprokopchuk.shoppingcart.utils.IdGeneratorInitializer;
-import com.vprokopchuk.shoppingcart.utils.SessionFactoryInitializer;
 import org.hibernate.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,7 +42,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public ShoppingCart create(ShoppingCart entity) {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         ShoppingCart shoppingCart = shoppingCartRepository.create(entity);
         transaction.commit();
         return shoppingCart;
@@ -54,7 +54,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
             changeItemQuantity(itemId, quantity);
         } else {
             IdGenerator generator = IdGeneratorInitializer.getInstance();
-            Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+            Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
             ShoppingCart shoppingCart = shoppingCartRepository.getOrCreate();
 
             Item item = Optional.ofNullable(itemRepository.findOne(itemId)).orElseThrow(() -> {
@@ -91,7 +91,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public void removeItemToCart(String itemId) {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         ShoppingCart shoppingCart = shoppingCartRepository.getOrCreate();
 
         Optional<ItemWrapper> itemWrapper = itemWrapperRepository.findByShoppingCartAndItemId(shoppingCart.getId(), itemId);
@@ -116,7 +116,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     }
 
     private boolean checkIfItemAddedToCart(String itemId) {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         ShoppingCart shoppingCart = shoppingCartRepository.getOrCreate();
         Optional<ItemWrapper> itemWrapperOptional = itemWrapperRepository.findByShoppingCartAndItemId(shoppingCart.getId(), itemId);
         transaction.commit();
@@ -126,7 +126,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public void changeItemQuantity(String itemId, int quantity) {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         ShoppingCart shoppingCart = shoppingCartRepository.getOrCreate();
 
         Optional<ItemWrapper> itemWrapperOptional = itemWrapperRepository.findByShoppingCartAndItemId(shoppingCart.getId(), itemId);
@@ -163,7 +163,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 
     @Override
     public ShoppingCart getOrCreate() {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         ShoppingCart shoppingCart = shoppingCartRepository.getOrCreate();
         List<ItemWrapper> itemWrappers = itemWrapperRepository.listByShoppingCart(shoppingCart.getId());
         shoppingCart.setItems(itemWrappers);

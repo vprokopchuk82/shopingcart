@@ -10,6 +10,7 @@ import com.vprokopchuk.shoppingcart.service.ItemService;
 import com.vprokopchuk.shoppingcart.service.ShoppingCartService;
 import com.vprokopchuk.shoppingcart.service.impl.ItemServiceImpl;
 import com.vprokopchuk.shoppingcart.service.impl.ShoppingCartServiceImpl;
+import org.hibernate.SessionFactory;
 
 import java.util.Objects;
 
@@ -19,6 +20,7 @@ public class EngineContext {
     private static ItemWrapperRepository itemWrapperRepository;
     private static ShoppingCartService shoppingCartService;
     private static ItemService itemService;
+    private static SessionFactory sessionFactory=null;
 
 
     private EngineContext() {
@@ -70,6 +72,16 @@ public class EngineContext {
                     getItemRepository(),
                     getItemWrapperRepository()
             );
+        }
+    }
+
+    public static SessionFactory getSessionFacory(){
+        if (Objects.nonNull(sessionFactory)){
+            return sessionFactory;
+        }
+        else synchronized (EngineContext.class){
+            sessionFactory = HibernateUtil.buildSessionFactory();
+            return sessionFactory;
         }
     }
 

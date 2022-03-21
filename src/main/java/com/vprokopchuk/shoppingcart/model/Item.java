@@ -86,7 +86,7 @@ public class Item implements Serializable {
     }
 
     public void reduceQuantity(int count){
-        if (this.quantity>count) {
+        if (this.quantity>=count) {
             this.quantity -= count;
         }
         else throw new WrongItemQuantityException();
@@ -97,7 +97,7 @@ public class Item implements Serializable {
     }
 
     public void changeQuantity(int quantityFromShoppingCart, int newQuantity){
-        if (newQuantity>(this.quantity+quantityFromShoppingCart)){
+        if (newQuantity>=(this.quantity+quantityFromShoppingCart)){
             throw new WrongItemQuantityException();
         }else {
             this.quantity = this.quantity + quantityFromShoppingCart - newQuantity;

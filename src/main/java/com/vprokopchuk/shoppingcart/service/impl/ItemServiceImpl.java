@@ -4,7 +4,6 @@ import com.vprokopchuk.shoppingcart.model.Item;
 import com.vprokopchuk.shoppingcart.repository.ItemRepository;
 import com.vprokopchuk.shoppingcart.service.ItemService;
 import com.vprokopchuk.shoppingcart.utils.EngineContext;
-import com.vprokopchuk.shoppingcart.utils.SessionFactoryInitializer;
 import org.hibernate.Transaction;
 
 import java.util.List;
@@ -19,7 +18,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<Item> findAll() {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         List<Item> all = itemRepository.findAll();
         transaction.commit();
         return all;
@@ -29,7 +28,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public Item create(Item entity) {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         Item item = itemRepository.create(entity);
         transaction.commit();
         return item;
@@ -37,7 +36,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public List<Item> createList(List<Item> itemList) {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         List<Item> collect = itemList.stream().map(itemRepository::create).collect(Collectors.toList());
         transaction.commit();
         return collect;
@@ -45,7 +44,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public void deleteList(List<Item> itemList) {
-        Transaction transaction = SessionFactoryInitializer.getInstance().getCurrentSession().beginTransaction();
+        Transaction transaction = EngineContext.getSessionFacory().getCurrentSession().beginTransaction();
         itemList.forEach(itemRepository::delete);
         transaction.commit();
     }
