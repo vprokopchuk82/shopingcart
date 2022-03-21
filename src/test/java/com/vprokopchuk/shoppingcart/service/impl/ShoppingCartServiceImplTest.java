@@ -20,6 +20,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.powermock.api.mockito.PowerMockito;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -30,6 +31,7 @@ import java.util.Optional;
 import static org.mockito.Mockito.when;
 import static org.mockito.Mockito.withSettings;
 
+@PowerMockIgnore({"com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.*", "com.sun.org.apache.xalan.*"})
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(HibernateUtil.class)
 public class ShoppingCartServiceImplTest{
@@ -46,7 +48,7 @@ public class ShoppingCartServiceImplTest{
 
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         sf = Mockito.mock(SessionFactory.class, withSettings().extraInterfaces(SessionFactoryImplementor.class));
         sfi = (SessionFactoryImplementor) sf;
         when(sf.openSession()).thenReturn(session);

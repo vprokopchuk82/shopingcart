@@ -15,7 +15,7 @@ services:
 
   shoppingcart:
     container_name: shoppingcart
-    image: shoppingcart
+    image: vprokopchuk/shoppingcart
     networks:
       - bridge
 
