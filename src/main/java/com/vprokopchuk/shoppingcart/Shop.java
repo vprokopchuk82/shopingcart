@@ -2,20 +2,9 @@ package com.vprokopchuk.shoppingcart;
 
 
 import com.vprokopchuk.shoppingcart.clientoperators.*;
-import com.vprokopchuk.shoppingcart.helper.exception.WrongItemException;
-import com.vprokopchuk.shoppingcart.helper.exception.WrongItemQuantityException;
+import com.vprokopchuk.shoppingcart.clientoperators.impl.ClientOperatorsFabricImpl;
 import com.vprokopchuk.shoppingcart.model.Item;
-import com.vprokopchuk.shoppingcart.model.ShoppingCart;
-import com.vprokopchuk.shoppingcart.repository.ItemRepository;
-import com.vprokopchuk.shoppingcart.repository.ItemWrapperRepository;
-import com.vprokopchuk.shoppingcart.repository.ShoppingCartRepository;
-import com.vprokopchuk.shoppingcart.repository.impl.ItemRepositoryImpl;
-import com.vprokopchuk.shoppingcart.repository.impl.ItemWrapperRepositoryImpl;
-import com.vprokopchuk.shoppingcart.repository.impl.ShoppingCartRepositoryImpl;
 import com.vprokopchuk.shoppingcart.service.ItemService;
-import com.vprokopchuk.shoppingcart.service.ShoppingCartService;
-import com.vprokopchuk.shoppingcart.service.impl.ItemServiceImpl;
-import com.vprokopchuk.shoppingcart.service.impl.ShoppingCartServiceImpl;
 import com.vprokopchuk.shoppingcart.utils.EngineContext;
 import org.apache.commons.collections4.CollectionUtils;
 
@@ -26,7 +15,7 @@ import java.util.Scanner;
 
 public class Shop{
 
-    private static final ClientOperatorsFabric fabric = new ClientOperatorsFabric();
+    private static final ClientOperatorsFabric fabric = new ClientOperatorsFabricImpl();
     public static void main (String[] args)
     {
 

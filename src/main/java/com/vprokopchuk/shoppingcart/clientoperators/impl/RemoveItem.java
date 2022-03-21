@@ -1,5 +1,6 @@
-package com.vprokopchuk.shoppingcart.clientoperators;
+package com.vprokopchuk.shoppingcart.clientoperators.impl;
 
+import com.vprokopchuk.shoppingcart.clientoperators.ClientOperators;
 import com.vprokopchuk.shoppingcart.repository.ItemRepository;
 import com.vprokopchuk.shoppingcart.repository.ItemWrapperRepository;
 import com.vprokopchuk.shoppingcart.repository.ShoppingCartRepository;

@@ -1,5 +1,6 @@
-package com.vprokopchuk.shoppingcart.clientoperators;
+package com.vprokopchuk.shoppingcart.clientoperators.impl;
 
+import com.vprokopchuk.shoppingcart.clientoperators.ClientOperators;
 import com.vprokopchuk.shoppingcart.helper.exception.WrongItemException;
 import com.vprokopchuk.shoppingcart.helper.exception.WrongItemQuantityException;
 import com.vprokopchuk.shoppingcart.repository.ItemRepository;
@@ -14,7 +15,7 @@ import com.vprokopchuk.shoppingcart.utils.EngineContext;
 
 import java.util.Scanner;
 
-public class AddItem implements ClientOperators{
+public class AddItem implements ClientOperators {
     @Override
     public void execute() {
         System.out.println("Check item  by id");
