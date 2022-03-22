@@ -1,5 +1,7 @@
 package com.vprokopchuk.shoppingcart.model;
 
+import com.vprokopchuk.shoppingcart.model.dto.ItemDto;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -108,8 +110,10 @@ public class ItemWrapper implements Serializable {
 
     @Override
     public String toString() {
+        ItemDto itemDto = new ItemDto(item);
+
         return "ItemWrapper{" +
-                ", item=" + item +
+                ", item=" + itemDto +
                 ", quantity=" + quantity +
                 ", totalAmount=" + totalAmount +
                 '}';
