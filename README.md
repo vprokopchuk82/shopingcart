@@ -25,4 +25,4 @@ networks:
   
 Instruction for run application:
 1. mvn clean package
-2. java -jar target/shopingcart-1.0-SNAPSHOT-jar-with-dependencies.jar
+2. java -jar /{ProjectDir}/target/shopingcart-1.0-SNAPSHOT-jar-with-dependencies.jar
